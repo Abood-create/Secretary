@@ -1,5 +1,3 @@
-# See https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
-
 # compiled output
 dist
 tmp
@@ -41,9 +39,26 @@ testem.log
 .DS_Store
 Thumbs.db
 
-.cursor/rules/nx-rules.mdc
-.github/instructions/nx.instructions.md
+# Secrets / environment
+.env
+.env.*
+!.env.example
 
-# Replit
+# Replit-specific (safe to exclude from GitHub/Railway)
+.replit
+.replitignore
 .cache/
 .local/
+.agents/
+.replit-artifact/
+*/.replit-artifact/
+replit.md
+
+# Project assets not needed in production
+attached_assets/
+scripts/
+
+# Archive exports
+*.tar.gz
+*.zip
+abood-secretary-project.*
